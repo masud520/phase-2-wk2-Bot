@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   function fetchBots() {
-    fetch('http://localhost:3000/bots')
+    fetch('')
       .then((r) => r.json())
       .then((bots) => setBots(bots));
   }
@@ -38,7 +38,7 @@ function App() {
 
   function handleBotDischarge(botId) {
     console.log("Discharging Bot ID:", botId);
-    fetch(`http://localhost:3000/bots/${botId}`, {
+    fetch(`${botId}`, {
       method: 'DELETE',
     }).then(() => {
       setSelectedBots((prevSelectedBots) => prevSelectedBots.filter((bot) => bot.id !== botId));
