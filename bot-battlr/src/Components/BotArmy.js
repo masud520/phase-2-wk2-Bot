@@ -16,7 +16,7 @@ export default function BotArmy({ bots, releaseFromYourBotArmy, enlistedBots}){
     }
 
     return (
-      <div className="bot-army">
+      <div className="Bot-Army">
         <h2>Bot Battlr | Your Bot Army</h2>
       {groupedBots.map((group, index) => (
         <div key={index} className="bot-row">
@@ -28,7 +28,7 @@ export default function BotArmy({ bots, releaseFromYourBotArmy, enlistedBots}){
             >
               <img src={bot.avatar_url} alt={bot.name} />
               <h3>{bot.name}</h3>
-              {/* <p className="catchphrase">Catchphrase: {bot.catchphrase}</p> */}
+              {/* /* <p className="catchphrase">Catchphrase: {bot.catchphrase}</p> */}
               <div className="bot-details">
                 <p>
                   <span className="icon health-icon">❤️</span> Health: {bot.health}

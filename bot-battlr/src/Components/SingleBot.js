@@ -32,7 +32,7 @@ function SingleBot({ bot, enlistedBots, setEnlistedBots }) {
     <div 
     className="single bot-card" onClick={handleDischarge}>
       <h2>{bot.name}</h2>
-      <img src={bot.avatar_url}/>
+      <img src={bot.avatar_url}alt="..."/>
       <p>Health: {bot.health}</p>
       <p>Damage: {bot.damage}</p>
       <p>Armor: {bot.armor}</p>
