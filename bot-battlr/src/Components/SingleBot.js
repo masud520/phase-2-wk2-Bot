@@ -48,3 +48,4 @@ function SingleBot({ bot, enlistedBots, setEnlistedBots }) {
 }
 
 export default SingleBot;
+
