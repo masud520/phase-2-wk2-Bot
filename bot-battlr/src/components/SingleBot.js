@@ -16,7 +16,7 @@ function SingleBot({ bot, enlistedBots, setEnlistedBots }) {
       
       setEnlistedBots([...enlistedBots, bot]);
 
-      fetch(`http://localhost:3000/bots${bot.id}`, {
+      fetch(`http://localhost:3000/bots/${bot.id}`, {
         method: "DELETE",
       })
         .then((resp) => {

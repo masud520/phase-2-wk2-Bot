@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import BotCollection from "./components/BotCollection";
-import BotArmy from "./components/BotArmy";
+import BotCollection from "./Components/BotCollection";
+import BotArmy from "./Components/BotArmy";
 import "./App.css";
 
 function App() {
