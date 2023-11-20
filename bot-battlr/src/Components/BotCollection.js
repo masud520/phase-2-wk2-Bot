@@ -1,24 +1,23 @@
 import React from "react";
 
-function Botcollection({bots,onBotClick}){
+import SingleBot from "./SingleBot";
 
-    return(
-        <>
-            <h1>Bot collection </h1>
-           <div id="botCollection">
-           {bots.map((bot) => (
-                    <div key={bot.id} className="bot-card" onClick={() => onBotClick(bot)}>
-                        <img src={bot.avatar_url} alt={bot.name} />
-                        <p>{bot.name}</p>
-                        <p>Class: {bot.bot_class}</p>
-                        <p>Health: {bot.health}</p>
-                        <p>Damage: {bot.damage}</p>
-                        <p className="catchphrase">{bot.catchphrase}</p>
-                    </div>
-                ))}
-           </div>
-        </>
-    )
+export default function BotCollection({ bots, enlistedBots, setEnlistedBots, handleBotDischarge  }) {
+  return (
+    <div className="BotCollection">
+      <h2>Bot Battlr | Bot Collection</h2>
+      <ul className="bot-collection">
+        {bots.map((bot) => (
+          <li key={bot.id}>
+            <SingleBot
+              bot={bot}
+              enlistedBots={enlistedBots}
+              setEnlistedBots={setEnlistedBots}
+              handleBotDischarge={handleBotDischarge}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
-
-export default Botcollection
